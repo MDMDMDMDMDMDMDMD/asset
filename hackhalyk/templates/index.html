@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Insurance Calculator</title>
+    </head>
+    <body>
+        <h1>Insurance Calculator</h1>
+        <form action="/calculate-insurance" method="post">
+            <label for="duration">Duration:</label>
+            <input type="number" name="duration" required>
+            <br>
+
+            <label for="currency">Currency:</label>
+            <select name="currency" required>
+                <option value="USD">USD</option>
+                <!-- Добавьте другие валюты, если необходимо -->
+            </select>
+            <br>
+
+            <label for="currencyRate">Currency Rate:</label>
+            <input type="number" name="currencyRate" step="0.01" required>
+            <br>
+
+            <label for="premium">Premium:</label>
+            <input type="number" name="premium" required>
+            <br>
+
+            <label for="amount">Amount:</label>
+            <input type="number" name="amount">
+            <br>
+
+            <label for="calculationDate">Calculation Date:</label>
+            <input type="datetime-local" name="calculationDate" required>
+            <br>
+
+            <!-- Добавьте остальные поля формы в соответствии с вашим запросом -->
+
+            <br>
+            <button type="submit">Calculate</button>
+        </form>
+    </body>
+</html>

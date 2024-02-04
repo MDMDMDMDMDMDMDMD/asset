@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результат расчета</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-8">
+
+<h2 class="text-2xl font-bold mb-4">Результат расчета</h2>
+
+<!-- Добавьте блок для отображения рассчитанного значения -->
+<p class="text-xl">Финальная сумма (fsum): {{ fsum }}</p>
+
+<h2 class="text-2xl font-bold mb-4">Покрытие риска</h2>
+
+<form action="/calculate_fsum" method="post" class="mb-6">
+    <label class="inline-block mb-2">
+        <input type="radio" name="risk" value="1" class="mr-2">
+        1
+    </label>
+    <label class="inline-block mb-2">
+        <input type="radio" name="risk" value="2" class="mr-2">
+        2
+    </label>
+    <label class="inline-block mb-2">
+        <input type="radio" name="risk" value="3" class="mr-2">
+        3
+    </label>
+
+    <h2 class="text-2xl font-bold mb-4">Занимаетесь ли вы активным отдыхом?</h2>
+
+    <label class="block mb-2">
+        <input type="radio" name="active_recreation" value="yes" class="mr-2">
+        Да
+    </label>
+    <label class="block mb-2">
+        <input type="radio" name="active_recreation" value="no" class="mr-2">
+        Нет
+    </label>
+
+    <h2 class="text-2xl font-bold mb-4">Подвержена ли ваша работа большим рискам?</h2>
+
+    <label class="block mb-2">
+        <input type="radio" name="risk_level" value="1" class="mr-2">
+        1
+    </label>
+    <label class="block mb-2">
+        <input type="radio" name="risk_level" value="2" class="mr-2">
+        2
+    </label>
+    <label class="block mb-2">
+        <input type="radio" name="risk_level" value="3" class="mr-2">
+        3
+    </label>
+
+    <h2 class="text-2xl font-bold mb-4">Были у вас страховые случаи ранее?</h2>
+
+    <label class="block mb-2">
+        <input type="radio" name="insurance_claims" value="yes" class="mr-2">
+        Да
+    </label>
+    <label class="block mb-2">
+        <input type="radio" name="insurance_claims" value="no" class="mr-2">
+        Нет
+    </label>
+
+    <!-- Добавьте кнопку для отправки данных -->
+    <button type="submit" class="bg-blue-500 text-white p-2 rounded">Рассчитать</button>
+</form>
+
+</body>
+</html>

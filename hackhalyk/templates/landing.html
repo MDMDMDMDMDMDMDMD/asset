@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Landing Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+  <div class="container mx-auto p-8">
+    <h1 class="text-4xl font-bold mb-4">Welcome to Our Landing Page</h1>
+    <p class="text-gray-600 mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+      labore et dolore magna aliqua.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-semibold mb-4">Минимальный базовый пакет</h2>
+        <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.</p>
+        <p class="text-blue-500 font-bold mb-2">Цена: $100</p>
+        <button class="bg-blue-500 text-white p-2 rounded" onclick="buyPackage(100)">Купить</button>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-semibold mb-4">Базовый пакет</h2>
+        <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.</p>
+        <p class="text-blue-500 font-bold mb-2">Цена: $200</p>
+        <button class="bg-blue-500 text-white p-2 rounded" onclick="buyPackage(200)">Купить</button>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-semibold mb-4">Продвинутый пакет</h2>
+        <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.</p>
+        <p class="text-blue-500 font-bold mb-2">Цена: $300</p>
+        <button class="bg-blue-500 text-white p-2 rounded" onclick="buyPackage(300)">Купить</button>
+      </div>
+    </div>
+
+    <div class="mt-8">
+        <p class="text-gray-600">Если вам не подходят готовые тарифы</p>
+        <div class="flex mt-4">
+            <button type="button" class="bg-blue-500 text-white p-2 rounded-md" onclick="configure()">Сконфигурировать</button>
+        </div>
+    </div>
+
+    <script>
+        function configure() {
+            // Используйте window.location.href для перехода на страницу pup.html
+            window.location.href = '/pup.html';
+        }
+    </script>
+
+
+  </div>
+
+  <script>
+    function buyPackage(price) {
+      // Используйте window.location.href для перехода на другую страницу, например, страницу покупки
+      window.location.href = `/buy_page?price=${price}`;
+    }
+  </script>
+
+</body>
+
+</html>
